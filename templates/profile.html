@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<head>
+    <style >
+body {
+  background-image: url('{%static 'images/vector.jpg'%}');
+}
+</style>
+
+</head>
+
+    <meta charset="UTF-8">
+    <title>profile page</title>
+</head>
+<body ></body>
+
+        <br>
+ <div align="center"><font size="18" style="color: lightpink; background-color:lightyellow " > 🅟🅡🅞🅕🅘🅛🅔 🅘🅝🅕🅞🅡🅜🅐🅣🅘🅞🅝</font>
+     <img src="{% static 'images/icon2.png' %}"width="70px"height="70px"align="left">
+     <img src="{% static 'images/icon2.png' %}"width="70px"height="70px"align="right"></div> <br><br>
+
+
+
+<marquee  direction="left"scrollamount="10"width="100%">
+    <table border="2px" align="center" style="border-color: navajowhite; line-grid: match-parent ;border-width: 7px;border-style: dashed;"  >
+        <tr>
+            <td><img src="{% static 'images/s.jpg' %}"width="200px"height="220px"></td>
+            <td><img src="{% static 'images/s.jpg' %}"width="200px"height="220px"></td>
+            <td><img src="{% static 'images/s.jpg' %}"width="200px"height="220px"></td>
+            <td><img src="{% static 'images/s.jpg' %}"width="200px"height="220px"></td>
+            <td><img src="{% static 'images/s.jpg' %}"width="200px"height="220px"></td>
+            <td><img src="{% static 'images/s.jpg' %}"width="200px"height="220px"></td>
+            <td><img src="{% static 'images/s.jpg' %}"width="200px"height="220px"></td>
+        </tr>
+    </table>
+<br>
+</marquee>
+
+
+<table style="color: darksalmon;border-width: 3px;border-style: solid " align="center" bgcolor="#ffebcd"    >
+        <tr >
+
+            <td width="200" height="30"  ><font size="4"  color="#696969" style="font-family: sans-serif" > NAME </font></td>
+            <td ><font size="4" color="#696969" style="font-family: sans-serif"> SIRIWAN SAENGAUNURAI</font></td>
+        </tr>
+    <tr>
+        <td ><font size="4"  color="#696969" style="font-family: sans-serif" > BIRTHDAY 🎂 </font></td>
+        <td ><font size="4" color="#696969" style="font-family: sans-serif">07-02-2001  20 YEARS</font></td>
+    </tr>
+
+    <tr>
+        <td ><font size="4"  color="#696969" style="font-family: sans-serif" > ADDRESS 🏡</font></td>
+        <td ><font size="4" color="#696969" style="font-family: sans-serif"> BAN PHAI SUBDISTRICT,BAN PHAI DISTRICT,KHON KAEN PROVINCE</font></td>
+    </tr>
+
+        <tr>
+        <td ><font size="4"  color="#696969" style="font-family: sans-serif" > EMAIL 💌 </font></td>
+        <td ><font size="4" color="#696969" style="font-family: sans-serif">SIRIWAN.SU@RMUTI.AC.TH</font></td>
+    </tr>
+
+    <tr>
+        <td ><font size="4" color="#696969" style="font-family: sans-serif" >FACEBOOK </font></td>
+        <td ><font size="4" color="#696969" style="font-family: sans-serif">OUEI SIRIWAN</font></td>
+    </tr>
+    </table>
+
+<br>
+ <div align="center"><strong style="border-width: 2px; color: #0a58ca"><font style="font-family: 'TH KoHo'; background-color: #e7f1ff ; text-align: center" size="12" color="#2f4f4f"  >
+     NICE TO MEET YOU </font><img src="{% static 'images/ff.gif' %}"width="80px"height="80px"> </strong></div>
+
+
+<img src="{% static 'images/icon2.png' %}"width="50px"height="50px"></td>
+ <div><button type="button" style="background-color: #f5c2c7;"title="ไปที่หน้า education" class="align-left">
+     <a href="education"> <font color="#2f4f4f" style="font-family:sans-serif "> Go to Education Page </font> </a>
+
+ </button></div><br>
+
+ <div><button type="button" style="background-color: peachpuff;"title="ไปที่หน้า interests"    class="align-left">
+     <a href= "interests"> <font color="#2f4f4f" style="font-family:sans-serif; color: #6a1a21"> Go to Interests Page </font> </a>
+
+ </button></div><br>
+
+<div><button type="button" style="background-color: #f5c2c7;"title="ไปที่หน้า dreamJob" class="align-left">
+     <a href="dreamJob"> <font color="#2f4f4f" style="font-family:sans-serif "> Go to Dream Job Page </font> </a>
+
+ </button></div><br>
+<div><button type="button" style="background-color: #f5c2c7;"title="ไปที่หน้า idol" class="align-left">
+     <a href="idol"> <font color="#2f4f4f" style="font-family:sans-serif "> Go to Idol Page </font> </a>
+ </button></div><br>
+
+</body>
+{% endblock %}

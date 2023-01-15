@@ -1,0 +1,24 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="me.print" />
+          <option value="ggg.*" />
+          <option value="PyPractice1.print" />
+          <option value="PyPractice1.input" />
+          <option value="PyPractice2.print" />
+          <option value="PyPractice1.int" />
+          <option value="PyPractice2.len" />
+          <option value="datetime" />
+          <option value="PyPractice3.print" />
+          <option value="PyPractice3.input" />
+          <option value="PyPractice3.int" />
+          <option value="PyPractice3.float" />
+          <option value="PyPractice3.ทดสอบ" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

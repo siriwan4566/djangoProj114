@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Idol Page</title>
+    <style>
+        body{background-image: url("{%static 'images/bg01.png'  %}")}
+    </style>
+</head>
+<body>
+<img src="{% static 'images/icon2.png' %}"width="70px"height="70px"align="left">
+<img src="{% static 'images/icon2.png' %}"width="70px"height="70px"align="right"><br>
+<div align="center"><strong><font style="font-family: 'TH KoHo';font-size: 50px;background-color: white;">MY IDOL </font> </strong></div><br>
+<div><strong><font style="font-family: 'TH KoHo';caret-color: #51585e;background-color: white;border-style: double;border-color: #eccccf;border-width: 3px;" size="28">NUT NISAMANEE</font> </strong></div><br>
+<table align="center" style="border-style: solid;border-color: #51585e;border-width: 5px;background-color: white" >
+        <tr>
+            <td><img src="{% static 'images/n1.jpg' %}"width="300px"height="300px"></td>
+            <td><img src="{% static 'images/n2.jpg' %}"width="300px"height="300px"></td>
+            <td><img src="{% static 'images/n3.jpg' %}"width="300px"height="300px"></td>
+        </tr>
+    </table><br><br>
+<div align="center"><strong><font style="font-family: 'TH Sarabun New';font-size: 22px;color: black;background-color: snow;border-color: #51585e;">
+    NUT NISAMANEE เป็นทั้งยูทูบเบอร์ นางแบบ ดีไซน์เนอร์ และแต่งหน้าเก่งมาก พี่นัททำงานเก่งและขยันมากๆ รักเพื่อนมีความจริงใจ<br>
+    พี่นัทตลกและเป็นกันเอง สามารถดูแลครอบครัวให้สุขสบาย พาครอบครัวไปเที่ยวต่างประเทศ ทำงานมีเงินเก็บจนสามารถซื้อบ้านสวยๆ<br>
+    มีรถสวยๆ เพราะเหตุนี้จึงทำให้มีพี่นัทเป็นบุคคลต้นแบบ
+
+    </font></strong></div><br><br>
+
+{#<div align="center"><video src="{% static 'mp4/The Space EP.31 พูดคุยกับ “นัท นิสามณี เลิศวรพงศ์”บิวตี้บล็อคเกอร์ชื่อดัง (LGBTQ+).mp4'  %}"width="400" height="300" controls="controls" loop autoplay style="border-color: #51585e;border-width: 3px"></video> </div>#}
+<br>
+<img src="{% static 'images/icon2.png' %}"width="50px"height="50px"></td>
+
+<div><button type="button" style="background-color: #f5c2c7;"title="ไปที่หน้า profile" class="align-left">
+     <a href="profile"> <font color="#2f4f4f" style="font-family:sans-serif "> Go to Profile Page </font> </a>
+ </button></div><br>
+ <div><button type="button" style="background-color: #f5c2c7;"title="ไปที่หน้า education" class="align-left">
+     <a href="education"> <font color="#2f4f4f" style="font-family:sans-serif "> Go to Education Page </font> </a>
+
+ </button></div><br>
+
+ <div><button type="button" style="background-color: peachpuff;"title="ไปที่หน้า interests"    class="align-left">
+     <a href= "interests"> <font color="#2f4f4f" style="font-family:sans-serif; color: #6a1a21"> Go to Interests Page </font> </a>
+
+ </button></div><br>
+
+<div><button type="button" style="background-color: #f5c2c7;"title="ไปที่หน้า dreamJob" class="align-left">
+     <a href="dreamJob"> <font color="#2f4f4f" style="font-family:sans-serif "> Go to Dream Job Page </font> </a>
+
+ </button></div><br>
+</body>
+{% endblock %}

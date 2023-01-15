@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>education page</title>
+     <style>
+body {
+  background-image: url('{%static 'images/vector.jpg'  %}');
+}
+</style>
+
+</head>
+
+<br>
+<body >
+<img src="{% static 'images/icon2.png' %}"width="70px"height="70px"align="left">
+<img src="{% static 'images/icon2.png' %}"width="70px"height="70px"align="right">
+<div align="center"><strong><font style="font-family: 'TH KoHo';color: white;background-color:pink;border-style: dotted;border-color:lightyellow; "size="20"> My Education</font> </strong></div><br>
+<br>
+
+    <table style="color: dimgrey; border-width: 3px; border-style: solid;border-color:#4d5154;background-color: papayawhip;"class="text-bg-dark"border="2px"align="center" >
+        <tr bgcolor="#ffc0cb"td align="center"style="color: lightyellow;border-width: 3px;border-color: #51585e;" >
+
+        <th width="15%" >education level</th>
+        <th width="40%" >place of study</th>
+        <th width="15%" >district</th>
+        <th width="15%" >province</th>
+        <th width="15%" >educational status</th>
+
+
+
+    </tr>
+        <tr >
+        <td align="center">Kindergarten 1-3</td>
+        <td align="center">Banphai Pratomsuksa School</td>
+        <td align="center">Banphai</td>
+        <td align="center">Khon Kaen</td>
+        <td align="center">graduate</td>
+
+    </tr>
+        <tr>
+        <td align="center">Grade 1-6</td>
+        <td align="center">Banphai Pratomsuksa School</td>
+        <td align="center">Banphai</td>
+        <td align="center">Khon Kaen</td>
+        <td align="center">graduate</td>
+    </tr>
+
+        </tr>
+        <tr>
+        <td align="center">Middle school</td>
+        <td align="center">Banphai School</td>
+        <td align="center">Banphai</td>
+        <td align="center">Khon Kaen</td>
+        <td align="center">graduate</td>
+    </tr>
+        <tr>
+        <td align="center">Vocational Certificate</td>
+        <td align="center">Khonkaen Industrial And Community Education College</td>
+        <td align="center">Chonnabot</td>
+        <td align="center">Khon Kaen</td>
+        <td align="center">graduate</td>
+    </tr>
+
+         <tr>
+        <td align="center">High Vocational Certificate</td>
+        <td align="center">Khonkaen Industrial And Community Education College</td>
+        <td align="center">Chonnabot</td>
+        <td align="center">Khon Kaen</td>
+        <td align="center">graduate</td>
+    </tr>
+
+         <tr>
+        <td align="center">Bachelor's degree</td>
+        <td align="center">Rajamangala University of Technology Isan Khonkaen Campus</td>
+        <td align="center">Mueang district</td>
+        <td align="center">Khon Kaen</td>
+        <td align="center">studying</td>
+    </tr>
+ </table> <br>
+
+    <table>
+        <tr>
+            <td><marquee  direction ="left" ><img src="{% static 'images/study1-removebg-preview.png.' %}"width="650" height="300"></marquee> </td>
+            <td><marquee  direction ="right" ><img src="{% static 'images/study1-removebg-preview.png.' %}"width="650" height="300"></marquee> </td>
+        </tr>
+    </table>
+    <br>
+
+
+   <img src="{% static 'images/icon2.png' %}"width="50px"height="50px"></td>
+ <div><button type="button" style="background-color: #f5c2c7;"title="ไปที่หน้า profile" class="align-left">
+     <a href="profile"> <font color="#2f4f4f" style="font-family:sans-serif "> Go to Profile Page </font> </a>
+
+ </button></div><br>
+
+ <div><button type="button" style="background-color: peachpuff;"title="ไปที่หน้า interests"    class="align-left">
+     <a href= "interests"> <font color="#2f4f4f" style="font-family:sans-serif; color: #6a1a21"> Go to Interests Page </font> </a>
+
+ </button></div><br>
+<div><button type="button" style="background-color: #f5c2c7;"title="ไปที่หน้า dreamJob" class="align-left">
+     <a href="dreamJob"> <font color="#2f4f4f" style="font-family:sans-serif "> Go to Dream Job Page </font> </a>
+
+ </button></div><br>
+<div><button type="button" style="background-color: #f5c2c7;"title="ไปที่หน้า idol" class="align-left">
+     <a href="idol"> <font color="#2f4f4f" style="font-family:sans-serif "> Go to Idol Page </font> </a>
+ </button></div><br>
+
+
+
+</body>
+{% endblock %}

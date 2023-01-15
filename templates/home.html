@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<head>
+    <style>
+        body{ background-color: #c5d7f2}
+    </style>
+    <body>
+    <div align="center"><strong><font style="font-family: 'TH KoHo';color: white;font-size: 40px ">WELCOME TO MY WEBPAGE</font></strong></div>
+<div align="left"><img src="{% static 'images/icon2.png' %}"width="200"height="200"><strong> <font style="font-family: 'TH KoHo';font-size: 40px;color: white">
+    This is my web browser. keep it for study</font></strong><img src="{% static 'images/s.jpg' %}"width="200"height="200" align="left"></div>
+
+
+</body>
+</head>
+{% endblock %}

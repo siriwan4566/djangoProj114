@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title >Dream Job Page</title>
+{#     <style>#}
+{#body {background-image: url('{%static 'images/bg02.png'  %}');}#}
+{#</style>#}
+
+</head><br>
+<body >
+<img src="{% static 'images/icon2.png' %}"width="70px"height="70px"align="left">
+<img src="{% static 'images/icon2.png' %}"width="70px"height="70px"align="right"><br>
+ <div class="container-fluid" align="center" ><strong><font style="font-family:'TH KoHo';color: #51585e;background-color: #eccccf"size="30">MY DREAM JOB</font> </strong></div><br>
+<div><strong><font style="font-family: 'TH KoHo';caret-color: #51585e;background-color: white;border-style: double;border-color: #eccccf;border-width: 3px;" size="28">YOUTUBER</font> </strong></div>
+<br>
+<table align="center" style="border-style: solid;border-color: #51585e;border-width: 5px;background-color: white" >
+        <tr>
+            <td><img src="{% static 'images/ped.jpg' %}"width="320px"height="180px"></td>
+            <td><img src="{% static 'images/toon.jpg' %}"width="320px"height="180px"></td>
+            <td><img src="{% static 'images/A.jpg' %}"width="320px"height="180px"></td>
+
+        </tr>
+    </table><br><br>
+    <div align="center"><strong><font style="font-family: 'TH Sarabun New';font-size: 22px;color: black;background-color: #f2e7c3;border-color: #51585e;">
+        YouTuber เป็นนักอัปโหลดสื่อวีดิทัศน์ผ่านเว็บไซต์ที่สามารถแบ่งปันวีดิทัศน์ได้อย่างยูทูบ เป็นผู้ที่มีชื่อเสียงได้รับความนิยมในสื่ออินเทอร์เน็ต<br>
+        ข้อดีอีกอย่างหนึ่งของการเริ่มต้นเป็นยูทูปเบอร์คือการที่เราไม่ต้องลงทุนมาก เหมือนเช่น การขายของ เพราะแค่มีสมาร์ทโฟนที่สามารถถ่ายวีดีโอได้<br>
+        ก็สามารถอัปโหลดวีดีโอลงบนยูทูปให้ผู้อื่นเข้ามาชมได้แล้ว นอกจากนี้การเรียนรู้การเป็นยูทูปเบอร์ยังช่วยให้ได้เรียนรู้งานตัดต่อ งานถ่ายทำ และการเขียนบทความ<br>
+        และในปัจจุบันอาชีพ YouTuber เป็นที่นิยมอย่างมาก แต่ก็อยู่ที่ว่าใครจะมีความคิดสร้างสรรค์คิดคอนเท้นต์ใหม่ๆ เรียกให้คนเข้าไปดูวิดีโอของตนเอง
+
+    </font></strong></div><br>
+ <img src="{% static 'images/icon2.png' %}"width="50px"height="50px"></td>
+ <div><button type="button" style="background-color: #f5c2c7;"title="ไปที่หน้า profile" class="align-left">
+     <a href="profile"> <font color="#2f4f4f" style="font-family:sans-serif "> Go to Profile Page </font> </a>
+
+ </button></div><br>
+
+ <div><button type="button" style="background-color: peachpuff;"title="ไปที่หน้า interests"    class="align-left">
+     <a href= "interests"> <font color="#2f4f4f" style="font-family:sans-serif; color: #6a1a21"> Go to Interests Page </font> </a>
+
+ </button></div><br>
+<div><button type="button" style="background-color: #f5c2c7;"title="ไปที่หน้า education" class="align-left">
+     <a href="education"> <font color="#2f4f4f" style="font-family:sans-serif "> Go to Education Page </font> </a>
+ </button></div><br>
+<div><button type="button" style="background-color: #f5c2c7;"title="ไปที่หน้า idol" class="align-left">
+     <a href="idol"> <font color="#2f4f4f" style="font-family:sans-serif "> Go to Idol Page </font> </a>
+ </button></div><br>
+
+</div>
+</body>
+{% endblock %}
