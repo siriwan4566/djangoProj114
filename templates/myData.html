@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8 bg-warning">
+        <h1 class="text-center text-danger"></h1>
+        <h2 class="text-center text-primary">I'am{{ name }} {{ surname }}</h2>
+        <table class="table-striped table-hover table-info">
+            <tr>
+                <td>Name</td> <td>{{ name }}</td>
+            </tr>
+            <tr>
+                <td>Surname</td> <td>{{surname }}</td>
+            </tr>
+            <tr>
+                <td>Gender</td> <td>{{gender }}</td>
+            </tr>
+            <tr>
+                <td>Status</td> <td>{{status }}</td>
+            </tr>
+            <tr>
+                <td>Work</td> <td>{{work }}</td>
+            </tr>
+            <tr>
+                <td>Education</td> <td>{{education}}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-lg-2"></div>
+    </div>
+    <div class="text-center">
+    <a href="{% url 'education' %}"> Education Page</a>
+    </div>
+{% endblock %}

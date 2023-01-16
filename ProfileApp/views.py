@@ -26,5 +26,16 @@ def idol(request):
 def hny (request):
     return render(request,'hny.html')
 
+def myData (request):
+    name = "Siriwan"
+    surname = "Saengaunurai"
+    gender = "G"
+    status = "student"
+    work = "RMUTI.Khonkean"
+    education = "dgree"
+    return render(request,'myData.html',
+    {'name':name, 'surname':surname,'gender':gender,
+     'status':status,'work':work, 'education':education} )
+
 
 

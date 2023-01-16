@@ -11,4 +11,5 @@ urlpatterns = [
     path('dreamJob', views.dreamJob, name='dreamJob'),
     path('idol', views.idol, name='idol'),
     path('hny', views.hny, name='hny'),
+    path('myData',views.myData,name='myData'),
 ]
