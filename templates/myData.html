@@ -3,7 +3,7 @@
 {% block content %}
     <div class="row">
     <div class="col-lg-2"></div>
-    <div class="col-lg-8 bg-warning">
+    <div class="col-lg-8 bg-white">
         <h1 class="text-center text-danger"></h1>
         <h2 class="text-center text-primary">I'am{{ name }} {{ surname }}</h2>
         <table class="table-striped table-hover table-info">
@@ -27,9 +27,11 @@
             </tr>
         </table>
     </div>
+
     <div class="col-lg-2"></div>
-    </div>
+    </div><br><br>
     <div class="text-center">
-    <a href="{% url 'education' %}"> Education Page</a>
-    </div>
+    <a href="{% url 'home' %}" class="btn btn-warning">
+    <i class="fa fa-home">  Home Page</i>
+   </a> </div>
 {% endblock %}

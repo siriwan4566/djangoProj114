@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Product Page</title>
+<style >
+    body  {background-image:  url("{% static 'images/flower2.jpg' %}")}
+</style>
+</head>
+<body>
+     <div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-7 bg-white">
+        <h1 class="text-center text-danger"></h1>
+
+{#        <h2 class="text-center text-primary">I'am{{ name }} {{ surname }}</h2>#}
+        <table class="table-striped table-hover table-info" align="left">
+            <img src="{% static 'images/icon2.png' %}"width="70px"height="70px"align="left" >
+           <tr>
+                <td >รหัสประจำตัว :</td> <td>{{ ID }}  </td><td style="color: white">......</td>
+                <td >ชื่อ-สกุล :</td> <td>{{ Name }}</td>
+
+            </tr>
+
+            <tr>
+                 <td>ที่อยู่ :</td> <td>{{Address }}</td> <td style="color: white">......</td>
+                 <td >ภูมิลำเนา :</td> <td>{{ Domicile }}</td>
+            </tr>
+            <tr>
+                <td>เพศ :</td> <td>{{Gender }}</td></td> <td style="color: white">......</td>
+                <td>น้ำหนัก :</td> <td>{{Weight }}</td>
+            </tr>
+            <tr>
+                <td>ส่วนสูง :</td> <td>{{Height }}</td></td> <td style="color: white">......</td>
+                <td>สีที่ชอบ :</td> <td>{{Coler }}</td>
+            </tr>
+            <tr>
+                <td>อาหารโปรด :</td> <td>{{Food}}</td><td style="color: white">......</td>
+                <td>อาชีพ :</td> <td>{{Status}}</td>
+            </tr>
+        </table>
+
+    </div></div><br><br>
+
+
+</body>
+
+{% endblock %}

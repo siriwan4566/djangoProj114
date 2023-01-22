@@ -26,16 +26,37 @@ def idol(request):
 def hny (request):
     return render(request,'hny.html')
 
-def myData (request):
-    name = "Siriwan"
-    surname = "Saengaunurai"
-    gender = "G"
-    status = "student"
-    work = "RMUTI.Khonkean"
-    education = "dgree"
-    return render(request,'myData.html',
-    {'name':name, 'surname':surname,'gender':gender,
-     'status':status,'work':work, 'education':education} )
+def showMydata (request):
+    ID = '65342310114-0'
+    Name = "ศิริวรรณ แสงอุ่นอุรัย"
+    Address = '303 อ.บ้านไผ่ จ.ขอนแก่น'
+    Domicile = 'จังหวัดขอนแก่น'
+    Gender = "หญิง"
+    Weight = "54 กิโลกรัม"
+    Height = "166 เซนติเมตร"
+    FavoriteColor = 'สีชมพู'
+    FavoriteFood = 'ก๋วยเตี๋ยว'
+    Status = "นักศึกษา"
+    Product = ['p','O','T']
+
+    return render(request,'product.html',
+    {'ID':ID,'Name':Name,'Address':Address,'Domicile':Domicile,
+     'Gender':Gender,'Weight':Weight,'Height':Height,'Coler':FavoriteColor,
+     'Food':FavoriteFood,'Status':Status,'Product':Product} )
 
 
+
+
+# def myData (request):
+#     name = "Siriwan"
+#     surname = "Saengaunurai"
+#     gender = "G"
+#     status = "student"
+#     work = "RMUTI.Khonkean"
+#     education = "dgree"
+#     return render(request,'myData.html',
+#     {'name':name, 'surname':surname,'gender':gender,
+#      'status':status,'work':work, 'education':education} )
+#
+#
 
