@@ -1,96 +1,96 @@
 {% extends 'base.html' %}
 {% block content %}
-{% load static %}
-<head>
-    <meta charset="UTF-8">
-    <title>education page</title>
-     <style>
-body {
-  background-color: #f3e5f5;
-}
-</style>
+    {% load static %}
+    <head>
+        <meta charset="UTF-8">
+        <title>education page</title>
+        <style>
+            body {
+                background-color: #f3e5f5;
+            }
+        </style>
 
-</head>
+    </head>
 
-<br>
-<body >
-<div class="container-fluid  col-10 "style="background-color: lightgreen;border-style: double;border-style: double;font-family: 'TH KoHo';
-    border-color:darkolivegreen;border-width: 5px; "align="center"  ><strong><font style="font-family:
-     'TH KoHo';color: white;font-size: 60px" >MY EDUCATION</font></strong>
+    <br>
+    <body>
+    <div class="container-fluid  col-10 " style="background-color: lightgreen;border-style: double;border-style: double;font-family: 'TH KoHo';
+    border-color:darkolivegreen;border-width: 5px; " align="center"><strong><font style="font-family:
+     'TH KoHo';color: white;font-size: 60px">MY EDUCATION</font></strong>
 
-{#        <div align="center"></div><br>#}
-<img src="{% static 'images/icon2.png' %}"width="70px"height="70px"align="left">
-<img src="{% static 'images/icon2.png' %}"width="70px"height="70px"align="right">
-<br></div><br>
-<div class="col-lg-12 container-fluid "style="background-color: #86b7fe;border-style: double;border-style: double;border-color:white;border-color: #0b5ed7;border-width: 8px"><br><br>
-    <table class="table table-primary table-striped table-hover " align="center"style="border-color: #51585e;">
-        <tr td align="center"style="color: darkslategray;border-width: 3px;border-color: #51585e;"class="table table-primary table-striped table-hover" >
+        {#        <div align="center"></div><br>#}
+        <img src="{% static 'images/icon2.png' %}" width="70px" height="70px" align="left">
+        <img src="{% static 'images/icon2.png' %}" width="70px" height="70px" align="right">
+        <br></div>
+    <br>
+    <div class="col-lg-12 container-fluid "
+         style="background-color: #86b7fe;border-style: double;border-style: double;border-color:white;border-color: #0b5ed7;border-width: 8px">
+        <br><br>
+        <table class="table table-primary table-striped table-hover " align="center" style="border-color: #51585e;">
+            <tr td align="center" style="color: darkslategray;border-width: 3px;border-color: #51585e;"
+                class="table table-primary table-striped table-hover">
 
-        <th width="20%"  >education level</th>
-        <th width="40%" >place of study</th>
-        <th width="15%" >district</th>
-        <th width="15%" >province</th>
-        <th width="15%" >educational status</th>
+                <th width="20%">education level</th>
+                <th width="40%">place of study</th>
+                <th width="15%">district</th>
+                <th width="15%">province</th>
+                <th width="15%">educational status</th>
 
 
+            </tr>
+            <tr>
+                <td align="center">Kindergarten 1-3</td>
+                <td align="center">Banphai Pratomsuksa School</td>
+                <td align="center">Banphai</td>
+                <td align="center">Khon Kaen</td>
+                <td align="center">graduate</td>
 
-    </tr>
-        <tr >
-        <td align="center">Kindergarten 1-3</td>
-        <td align="center">Banphai Pratomsuksa School</td>
-        <td align="center">Banphai</td>
-        <td align="center">Khon Kaen</td>
-        <td align="center">graduate</td>
+            </tr>
+            <tr>
+                <td align="center">Grade 1-6</td>
+                <td align="center">Banphai Pratomsuksa School</td>
+                <td align="center">Banphai</td>
+                <td align="center">Khon Kaen</td>
+                <td align="center">graduate</td>
+            </tr>
 
-    </tr>
-        <tr>
-        <td align="center">Grade 1-6</td>
-        <td align="center">Banphai Pratomsuksa School</td>
-        <td align="center">Banphai</td>
-        <td align="center">Khon Kaen</td>
-        <td align="center">graduate</td>
-    </tr>
+            </tr>
+            <tr>
+                <td align="center">Middle school</td>
+                <td align="center">Banphai School</td>
+                <td align="center">Banphai</td>
+                <td align="center">Khon Kaen</td>
+                <td align="center">graduate</td>
+            </tr>
+            <tr>
+                <td align="center">Vocational Certificate</td>
+                <td align="center">Khonkaen Industrial And Community Education College</td>
+                <td align="center">Chonnabot</td>
+                <td align="center">Khon Kaen</td>
+                <td align="center">graduate</td>
+            </tr>
 
-        </tr>
-        <tr>
-        <td align="center">Middle school</td>
-        <td align="center">Banphai School</td>
-        <td align="center">Banphai</td>
-        <td align="center">Khon Kaen</td>
-        <td align="center">graduate</td>
-    </tr>
-        <tr>
-        <td align="center">Vocational Certificate</td>
-        <td align="center">Khonkaen Industrial And Community Education College</td>
-        <td align="center">Chonnabot</td>
-        <td align="center">Khon Kaen</td>
-        <td align="center">graduate</td>
-    </tr>
+            <tr>
+                <td align="center">High Vocational Certificate</td>
+                <td align="center">Khonkaen Industrial And Community Education College</td>
+                <td align="center">Chonnabot</td>
+                <td align="center">Khon Kaen</td>
+                <td align="center">graduate</td>
+            </tr>
 
-         <tr>
-        <td align="center">High Vocational Certificate</td>
-        <td align="center">Khonkaen Industrial And Community Education College</td>
-        <td align="center">Chonnabot</td>
-        <td align="center">Khon Kaen</td>
-        <td align="center">graduate</td>
-    </tr>
-
-         <tr>
-        <td align="center">Bachelor's degree</td>
-        <td align="center">Rajamangala University of Technology Isan Khonkaen Campus</td>
-        <td align="center">Mueang district</td>
-        <td align="center">Khon Kaen</td>
-        <td align="center">studying</td>
-    </tr>
-    </table> <br>
+            <tr>
+                <td align="center">Bachelor's degree</td>
+                <td align="center">Rajamangala University of Technology Isan Khonkaen Campus</td>
+                <td align="center">Mueang district</td>
+                <td align="center">Khon Kaen</td>
+                <td align="center">studying</td>
+            </tr>
+        </table>
+        <br>
 
     </div>
     <br>
 
 
-
-
-
-
-</body>
+    </body>
 {% endblock %}
