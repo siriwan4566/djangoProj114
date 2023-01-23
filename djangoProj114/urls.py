@@ -7,5 +7,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('', views.home, name='home'),
-    path('/ProfileApp/',include('ProfileApp.urls')),
+    path('ProfileApp/',include('ProfileApp.urls')),
 ]
