@@ -1,4 +1,4 @@
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render,HttpResponse,redirect
 
 # Create your views here.
 
@@ -40,7 +40,7 @@ def product (request):
     products = [
       ['Bright Body Cologne Spray ', '175.00','images/spraybody.jpg'],
       ['Perfume 9ml', "195.00",'images/perfume.jpg'],
-      ['Perfume 15ml', "895.00", 'images/perfume15.jpg'],
+      ['Perfume 50ml', "895.00", 'images/perfume15.jpg'],
       ['Body Lotion',"145.00",'images/lotion.jpg'],
       ['Brightening Serum Vitamin C','250.00','images/c.jpg'],
       [' Nature Summer Soft Linen Mist ','195.00','images/cc.jpg'],
@@ -57,25 +57,36 @@ def product (request):
       'Domicile':Domicile,'Gender':Gender,'Weight':Weight,'Height':Height,
       'Coler':FavoriteColor,'Food':FavoriteFood,'Status':Status,'products': products} )
 
-# def showMydata(request):
-#     Brand ='oriental princess shop'
-#
-#     context =
-#     return render(request, 'product.html', context)
-#
+from ProfileApp.models import *
+productList = []
+def showProduct(request):
+        products = Product('P001','Shampoo','Dove',49.00,100)
+        productList.append(products)
+        products = Product('P002', 'Lotion', 'vee', 89.00, 100)
+        productList.append(products)
+        products = Product('P00', 'Soft Drink ', 'Fanta', 25.00, 100)
+        productList.append(products)
+        context = {'products':productList}
+        return render(request,'showProduct.html',context)
 
-
-
-# def myData (request):
-#     name = "Siriwan"
-#     surname = "Saengaunurai"
-#     gender = "G"
-#     status = "student"
-#     work = "RMUTI.Khonkean"
-#     education = "dgree"
-#     return render(request,'myData.html',
-#     {'name':name, 'surname':surname,'gender':gender,
-#      'status':status,'work':work, 'education':education} )
+# def newProduct(request):
+#     if request.method =='POST': #submit ข้อมูลจากฟอร์มมา
+#         id = request.POST['id']
+#         name = request.POST['name']
+#         brand = request.POST['brand']
+#         price= request.POST['price']
+#         net = request.POST['net']
+#         product =Product(id,name,brand,price,net)
+#         productList.append(product)
+#         return redirect('showProduct')
+#     else:
+#         return render(request,'fromProductNormal.html')
 #
-#
-
+#  from  ProfileApp.forms import *
+# def frmProduct(request):
+#     if request.method == 'POST':
+#         return  redirect('showProduct')
+#     else:
+#         form = ProductForm()
+#         context = {'form':form }
+#         return render(request,'Products.html')
