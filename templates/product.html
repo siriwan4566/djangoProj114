@@ -9,7 +9,7 @@
     body  {background-image:  url("{% static 'images/flower2.jpg' %}")}
 </style>
 </head>
-<body>
+
      <div class="row">
     <div class="col-lg-2"></div>
     <div class="col-lg-7 bg-white">
@@ -43,8 +43,32 @@
         </table>
 
     </div></div><br><br>
+   <font style="font-family: 'TH Sarabun New';color: #373b3e;font-size:46px; background-color: white">
+       รายการสินค้า</font>
 
+<table width="100%" border="3" bgcolor="white" style="font-size: 18px;border-style: solid">
+  <thead style="border-width: 3px">
+   <tr bgcolor="#e6e6fa" style="font-size: 20px;border-width: 3px" >
+        <td width="30" align="center"> <strong> Product Name </strong></td>
+        <td  width="30" align="center"><strong>  Price </strong>  </td>
+        <td  width="40" align="center"><strong>Picture</strong></td>
 
-</body>
+   </tr></thead>
+<tbody style="border-width: 3px">
+   {% for products in products %}
+         <tr>
+              <td align="center">{{ products.0}}</td>
+              <td align="center">{{ products.1 }}</td>
+              <td align="center"><img src="{% static products.2 %}"class="max-width:height:auto;"
+              style="width:200px "> </td>
+{#              <td align="center"><img src="{% static 'images/spraybody.jpg' %}"width="70" height="70"></td>#}
+        </tr>
+    {% endfor %} </tbody>
+
+</table>
+
 
 {% endblock %}
+
+
+
