@@ -1,4 +1,7 @@
 from django.shortcuts import render,HttpResponse,redirect
+import datetime
+from django.contrib import messages
+from  ProfileApp.form import *
 
 # Create your views here.
 
@@ -26,7 +29,7 @@ def idol(request):
 def hny (request):
     return render(request,'hny.html')
 
-def product (request):
+def product(request):
     ID = '65342310114-0'
     Name = "ศิริวรรณ แสงอุ่นอุรัย"
     Address = '303 อ.บ้านไผ่ จ.ขอนแก่น'
@@ -55,19 +58,83 @@ def product (request):
     ]
     return render(request,'product.html',{ 'ID':ID,'Name':Name,'Address':Address,
       'Domicile':Domicile,'Gender':Gender,'Weight':Weight,'Height':Height,
-      'Coler':FavoriteColor,'Food':FavoriteFood,'Status':Status,'products': products} )
+      'Coler':FavoriteColor,'Food':FavoriteFood,'Status':Status,'products': products})
 
-from ProfileApp.models import *
-productList = []
-def showProduct(request):
-        products = Product('P001','Shampoo','Dove',49.00,100)
-        productList.append(products)
-        products = Product('P002', 'Lotion', 'vee', 89.00, 100)
-        productList.append(products)
-        products = Product('P00', 'Soft Drink ', 'Fanta', 25.00, 100)
-        productList.append(products)
-        context = {'products':productList}
-        return render(request,'showProduct.html',context)
+
+from .models import *
+def retrieveAllProduct(request):
+    products = Product.objects.all() #อ่ํานข้อมูลทุกเรคอร์ด All ในฐํานข้อมูลที่เชื่อมโดย Category
+    context ={'products':products}
+    return render(request, 'Product/retivevAllProduct.html',context)
+
+def retivevOneProduct(request, pid):
+    product = Product.objects.get(pid=pid) #อ่ํานข้อมูลทุกเรคอร์ด One ในฐํานข้อมูลที่เชื่อมโดย Category
+    context ={'product':product}
+    return render(request, 'Product/retivevOneProduct.html',context)
+
+def createProduct(request):
+    if request.method == 'POST':
+        form = ProductMForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.add_message(request,messages.SUCCESS,'บันทุกสินค้าใหม่เรียบร้อย.........')
+            return redirect('retrieveAllProduct')
+        else:
+            product = Product.objects.get(pid=request.POST['pid'])
+            if product:
+                messages.add_message(request, messages.SUCCESS, 'รหัสสินค้าที่่กำหนดซ้ำกับที่มีอยู่')
+            messages.add_message(request, messages.SUCCESS, 'ไม่สามารถบันทึกข้อมูลสินค้าใหม่ได้.........')
+
+    else:
+        form = ProductMForm()
+    context = {'form':form}
+    return render(request,'product/createProduct.html',context)
+
+
+
+lstOurProduct = []
+def listProduct(request):
+    details = "CLOTHES"
+    name = "MISS.SIRIWAN SAENGAUNURAI"
+    date = datetime.datetime.now()
+    return render(request, 'listProduct.html', {'lstProduct': lstOurProduct,
+                                              'details': details, 'name': name,
+                                              'date': date.strftime("%A %d-%m-%Y ")},)
+def inputProduct(request):
+    if request.method == 'POST':
+        form = ProductForm(request.POST)
+        if form.is_valid():
+            pid = form.cleaned_data['id']
+            brand = form.cleaned_data['brand']
+            ptype = form.cleaned_data['type']
+            size = form.cleaned_data['size']
+            price = form.cleaned_data['price']
+            amount = form.cleaned_data['amount']
+            member = form.cleaned_data['member']
+
+            productnew = product11(pid, brand, ptype, size, price, amount,member,)
+            lstOurProduct.append(productnew)
+            return redirect('listProduct')
+        else:
+            return redirect('pro_retrive_all')
+    else:
+        form = ProductForm()
+    context = {
+        'form': form
+    }
+    return render(request, 'inputProduct.html', context)
+
+
+# productList = []
+# def showProduct(request):
+#         products = Product('P001','Shampoo','Dove',49.00,100)
+#         productList.append(products)
+#         products = Product('P002', 'Lotion', 'vee', 89.00, 100)
+#         productList.append(products)
+#         products = Product('P00', 'Soft Drink ', 'Fanta', 25.00, 100)
+#         productList.append(products)
+#         context = {'products':productList}
+#         return render(request,'showProduct.html',context)
 
 # def newProduct(request):
 #     if request.method =='POST': #submit ข้อมูลจากฟอร์มมา
@@ -82,7 +149,7 @@ def showProduct(request):
 #     else:
 #         return render(request,'fromProductNormal.html')
 #
-#  from  ProfileApp.forms import *
+#
 # def frmProduct(request):
 #     if request.method == 'POST':
 #         return  redirect('showProduct')

@@ -12,6 +12,15 @@ urlpatterns = [
     path('idol', views.idol, name='idol'),
     path('hny', views.hny, name='hny'),
     path('product',views.product,name='product'),
+path('listProduct', views.listProduct, name ='listProduct'),
+    path('inputProduct', views.inputProduct, name='inputProduct'),
+    path('retrieveAllProduct', views.retrieveAllProduct, name = 'retrieveAllProduct'),
+    path('<pid>/retivevOneProduct', views.retivevOneProduct,name = 'retivevOneProduct'),
+    path('createProduct', views.createProduct, name='createProduct'),
+
+
+    # path('listProduct', views.listProduct, name ='listProduct'),
+    # path('inputProduct', views.inputProduct, name='inputProduct'),
     # path('showProduct',views.showProduct,name='showProduct'),
     # path('newProduct',views.newProduct,name = 'newProduct'),
     # path('Products',views.Product,name='Products'),

@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% load static %}
+    {% load humanize %}
+    <head>
+        <style>
+            body {background-color:#bfd1ec}
+</style>
+
+</head>
+    <br>
+    <div class="container-fluid  col-lg-7 text-center "style="background-color: lightgoldenrodyellow;border-style: solid;
+    border-color:darkslategray;border-width: 5px; "  >
+
+        <div align="center"><strong><font style="font-family: 'TH KoHo';color: darkslategray;font-size: 40px ">INPUT PRODUCT PAGE</font></strong>
+        </div>
+      </div>  <br>
+
+       <div class=" container-fluid col-lg-7  "  style="font-weight: bold;border-style: double;border-width: 9px;border-color: white;
+border-color:palevioletred;background-color: snow;font-family: 'TH KoHo';font-size: 25px"><strong style="font-family: 'Eras Medium ITC';text-align: center">
+           Please enter product information</strong> <br><br>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    {{ form.as_p }}
+                </div>
+
+
+                <div class="row" >
+                    <div class="col-md-12">
+                        <button class="text-dark btn btn-black float-start" type="reset"
+                                style="background-color: #eccccf">
+                            <i class="fas fa-eraser mx-1"></i>
+                            <span>DELETE</span>
+                        </button>
+                        <button class="text-dark btn btn-black  float-end" type="submit"
+                                style="background-color: #eccccf">
+                            <i class="fas fa-save mx-1"></i>
+                            <span>SAVE</span>
+                        </button>
+                    </div></div>
+
+            </form>
+
+        </div>
+    </div>
+{% endblock %}
+
+
+
+
+
+

@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% load humanize %}
+    {% load static %}
+    <head>
+        <style>
+            body {background-color: floralwhite}
+</style>
+
+</head>
+    <body><br>
+    <div class="container-fluid  col-lg-7 text-center "style="background-color: lightgoldenrodyellow;border-style: solid;
+    border-color:darkslategray;border-width: 5px; "  >
+
+        <div align="center"><strong><font style="font-family: 'TH KoHo';color: darkslategray;font-size: 40px ">WELCOME TO MY LIST PRODUCT PAGE</font></strong>
+        </div>
+      </div>  <br>
+       <strong> <div class="row"STYLE="font-family: 'TH KoHo';font-size: 25px">
+            <div class="col-6 px-3">
+                <b>
+                    <p>PRODUCT TYPE : {{ details }}</p>
+                    <p>ORGANIZER : {{ name }}</p>
+                    <p>PUBLISH DATE: {{ date }}</p>
+
+                </b>
+            </div>
+
+        </div></strong> <br>
+
+        <div>
+            <table class="table table-danger table-hover table-striped table-bordered">
+                <tr>
+                    <th>ID</th>
+                    <th>BRAND</th>
+                    <th>TYPE</th>
+                    <th>SIZE</th>
+                    <th>MEMBER</th>
+                    <th>PRICE</th>
+                    <th>AMOUNT</th>
+
+                    <th>DISCOUNT</th>
+
+                    <th>NET</th>
+
+
+
+                </tr>
+                {% for listproduct in lstProduct %}
+                    <tr>
+                        <td>{{ listproduct.getId }}</td>
+                        <td>{{ listproduct.getBrand }}</td>
+                        <td>{{ listproduct.getType }}</td>
+                        <td>{{ listproduct.getSize }}</td>
+                        <td>{{ listproduct.getMember }}</td>
+                        <td>{{ listproduct.getPrice|intcomma }} </td>
+                        <td>{{ listproduct.getAmount }}</td>
+                        <td>{{ listproduct.getDiscount|floatformat }}</td>
+                        <td>{{ listproduct.getNet|intcomma }} </td>
+
+
+
+{#                         <td>{{ listproduct.getSum|intcomma}} </td>#}
+
+
+                    </tr>
+                {% endfor %}
+            </table>
+            <div class="col-md-12">
+                <a href="{% url 'inputProduct' %}" class="btn btn-black float-end"style="background-color: lightgoldenrodyellow">
+                    <i class="fas fa-plus"></i>เพิ่มสินค้า</a>
+            </div>
+        </div>
+
+
+{% endblock %}
+

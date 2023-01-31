@@ -1,7 +1,7 @@
 {% load static %}
 
 
-<ul class="list-group "  >
+<strong><ul class="list-group "  style="font-family: 'Eras Medium ITC';font-size: 18px;"  >
     <li class="list-group-item active text-dark" style="background-color:#F6C8B6;border-color: #51585e">
         <i class="fa fa-list l"></i>Menu:
     </li>
@@ -39,6 +39,21 @@
        <a href="{% url 'product' %}"style="color: #51585e"> Product Page</a>
     </li>
 
+    <li class="list-group-item "style="border-color: #51585e"title="ไปที่หน้า List Product Page">
+       <i class="fa fa-list"></i>
+       <a href="{% url 'listProduct' %}"style="color: #51585e">List Product Page</a>
+    </li>
+
+
+     <li class="list-group-item "style="border-color: #51585e"title="ไปที่หน้า retrieve All Product Page">
+       <i class="fa fa-shopping-basket"></i>
+       <a href="{% url 'retrieveAllProduct' %}"style="color: #51585e"> retrieve All Product Page</a>
+    </li>
+
+
+
+
+
 {#    <li class="list-group-item ">#}
 {#       <i class="fas fa-product-hunt"></i>#}
 {#       <a href="{% url 'showProduct' %}"> Show Product Page</a>#}
@@ -57,5 +72,5 @@
 {#        <a class="fa fa-cloud" href="{% url 'myData' %}">myData Page </a>#}
 {#    </li>#}
 
-</ul>
+</ul></strong>
 
