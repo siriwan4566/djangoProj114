@@ -1,6 +1,7 @@
 from django import forms
 from .models import *
-#
+
+#งาน11
 class ProductForm(forms.Form):
 
     optionbrand = (("LEVI'S","LEVI'S"),("JASPAL", "JASPAL"), ("LACOSTE","LACOSTE"),("H&M", "H&M"),("ZARA","ZARA"),("A||Z","A||Z"))

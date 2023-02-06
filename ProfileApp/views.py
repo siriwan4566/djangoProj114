@@ -62,6 +62,7 @@ def product(request):
 
 
 from .models import *
+# inClass
 def retrieveAllProduct(request):
     products = Product.objects.all() #อ่ํานข้อมูลทุกเรคอร์ด All ในฐํานข้อมูลที่เชื่อมโดย Category
     context ={'products':products}
@@ -91,7 +92,7 @@ def createProduct(request):
     return render(request,'product/createProduct.html',context)
 
 
-
+#งาน11
 lstOurProduct = []
 def listProduct(request):
     details = "CLOTHES"
@@ -125,35 +126,4 @@ def inputProduct(request):
     return render(request, 'inputProduct.html', context)
 
 
-# productList = []
-# def showProduct(request):
-#         products = Product('P001','Shampoo','Dove',49.00,100)
-#         productList.append(products)
-#         products = Product('P002', 'Lotion', 'vee', 89.00, 100)
-#         productList.append(products)
-#         products = Product('P00', 'Soft Drink ', 'Fanta', 25.00, 100)
-#         productList.append(products)
-#         context = {'products':productList}
-#         return render(request,'showProduct.html',context)
 
-# def newProduct(request):
-#     if request.method =='POST': #submit ข้อมูลจากฟอร์มมา
-#         id = request.POST['id']
-#         name = request.POST['name']
-#         brand = request.POST['brand']
-#         price= request.POST['price']
-#         net = request.POST['net']
-#         product =Product(id,name,brand,price,net)
-#         productList.append(product)
-#         return redirect('showProduct')
-#     else:
-#         return render(request,'fromProductNormal.html')
-#
-#
-# def frmProduct(request):
-#     if request.method == 'POST':
-#         return  redirect('showProduct')
-#     else:
-#         form = ProductForm()
-#         context = {'form':form }
-#         return render(request,'Products.html')

@@ -1,5 +1,3 @@
-import datetime
-
 from django.db import models
 class Category(models.Model):
     name = models.CharField(max_length=50,default='')
@@ -18,14 +16,14 @@ class Product(models.Model):
 
     def __str__(self):
         return self.pid + ':'+self.name+':'+self.brand+':'+str(self.price)+':'+str(self.net)+':'+self.category.name
-
+import datetime
 class Employee(models.Model):
     eid = models.CharField(max_length=5, default='')
     name = models.CharField(max_length=35,default='')
     surname = models.CharField(max_length=35,default='')
     address = models.CharField(max_length=200,default='')
     gender = models.BooleanField(default=True)
-    birthday = models.DateField(default=datetime.date.today())
+    birthday = models.CharField(max_length=20, default="")
     salary = models.FloatField(default=0.00)
 
 
@@ -80,3 +78,6 @@ class product11():
         return self.__discount
     def getNet(self):
         return self.__net
+
+
+
